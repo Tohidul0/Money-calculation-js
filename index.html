@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Money</title>
-    <!-- tailwind css link add -->
+    <!-- tailwind css link add------------------------------------- -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-700">
    <head>
-    <h1 class="text-5xl text-center py-8 ">Monney Calculation</h1>
+    <!-- header part add ------------------------------------------->
+    <h1 class="text-5xl text-center pt-8 text-lime-500 ">Monney Calculation</h1>
    </head>
    <main>
      <div class="container p-16">
         <div class="grid grid-cols-2 gap-16">
-            <div >
-                <img clas="fluid" src="img/money.webp" alt="money image">
+            <!-- image part with colm half---------------------------- -->
+            <div class="border border-orange-400 p-8 shadow-2xl my-auto bg-zinc-800 rounded">
+                <img class="fluid" src="img/money.webp" alt="money image">
             </div>
-            <div>
+            <!-- second half body where clacultion part doing------------------------- -->
+            <div class="border border-orange-400 p-8 shadow-2xl text-white bg-zinc-800 rounded">
                 <h1 class="text-center text-3xl pb-8">INCOME</h1>
                 
                     <div class=" grid grid-cols-2  gap-4 mb-4">
@@ -53,9 +56,42 @@
                         <h1>Cloths : </h1>
                     </div>
                    <div>
-                    <input class="mx-auto" type="text" placeholder="number-digit">
+                    <input class="mx-auto rounded" type="text" placeholder="number-digit">
                    </div>
                 </div>
+
+
+                <!-- hidden part------------- -->
+                <h3 class="text-center text-2xl hidden">plz less Expence..!!!!!</h3>
+
+
+                <!-- first button add------------------ -->
+                <div class="flex items-center justify-center pb-8">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Calculate</button>
+                </div>
+
+                <h3 class="text-center text-2xl pb-4">Total Expence : <span>0.00</span>$</h3>
+                <h3 class="text-center text-2xl">Balance : <span>0.00</span>$</h3>
+
+                <div class="grid grid-cols-4 gap-4 ms-16 pt-16">
+                    <div>
+                        <h1>save : </h1>
+                    </div>
+                    <div>
+                        <input class="w-20 " type="text" placeholder="Number in">
+                    </div>
+                    <div>
+                        <h1>%</h1>
+                    </div>
+                    <div> 
+                         <button class="bg-blue-500 text-white px-4  rounded">Save</button>    
+                    </div>
+                    
+                </div>
+
+                <h3 class="text-center text-2xl pt-4 pb-4">Saving Ammount : <span>0.00</span>$</h3>
+                <h3 class="text-center text-2xl">Remaining Balance : <span>0.00</span>$</h3>
+
             </div>
         </div>
      </div>
