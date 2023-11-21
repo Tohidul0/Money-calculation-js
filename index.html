@@ -28,7 +28,7 @@
                             <h1>Income : </h1>
                         </div>
                        <div>
-                        <input class="mx-auto" type="text" placeholder="number-digit">
+                        <input id="income" class="mx-auto text-black" type="text" placeholder="number-digit">
                        </div>
                     </div>
                 
@@ -40,7 +40,7 @@
                         <h1>Food : </h1>
                     </div>
                    <div>
-                    <input class="mx-auto" type="text" placeholder="number-digit">
+                    <input id="food" class="mx-auto text-black" type="text" placeholder="number-digit">
                    </div>
                 </div>
                 <div class=" grid grid-cols-2  gap-4 mb-4  overflow-hidden">
@@ -48,7 +48,7 @@
                         <h1>Rent : </h1>
                     </div>
                    <div>
-                    <input class="mx-auto" type="text" placeholder="number-digit">
+                    <input id="rent" class="mx-auto text-black" type="text" placeholder="number-digit">
                    </div>
                 </div>
                 <div class=" grid grid-cols-2  gap-4 mb-4  overflow-hidden">
@@ -56,29 +56,29 @@
                         <h1>Cloths : </h1>
                     </div>
                    <div>
-                    <input class="mx-auto rounded" type="text" placeholder="number-digit">
+                    <input id="cloth" class="mx-auto rounded text-black" type="text" placeholder="number-digit">
                    </div>
                 </div>
 
 
                 <!-- hidden part------------- -->
-                <h3 class="text-center text-2xl hidden">plz less Expence..!!!!!</h3>
+                <h3 id="hide" class="text-center text-2xl hidden">plz less Expence..!!!!!</h3>
 
 
                 <!-- first button add------------------ -->
                 <div class="flex items-center justify-center pb-8">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Calculate</button>
+                    <button id="cal" class="bg-blue-500 text-white px-4 py-2 rounded">Calculate</button>
                 </div>
 
-                <h3 class="text-center text-2xl pb-4">Total Expence : <span>0.00</span>$</h3>
-                <h3 class="text-center text-2xl">Balance : <span>0.00</span>$</h3>
+                <h3 class="text-center text-2xl pb-4">Total Expence : <span id="totalEx">0.00</span>$</h3>
+                <h3 class="text-center text-2xl">Balance : <span id="bal">0.00</span>$</h3>
 
                 <div class="grid lg:grid-cols-4 gap-4 ms-16 pt-16">
                     <div>
                         <h1>save : </h1>
                     </div>
                     <div>
-                        <input class="w-20 " type="text" placeholder="Number in">
+                        <input id="save" class="w-20 text-black " type="text" placeholder="Number in">
                     </div>
                     <div>
                         <h1>%</h1>
@@ -96,5 +96,10 @@
         </div>
      </div>
    </main>
+
+
+
+
+   <script src="money.js"></script>
 </body>
 </html>
