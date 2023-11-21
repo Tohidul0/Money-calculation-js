@@ -11,6 +11,9 @@ function giveDigit(value){
 
 //---------
 
+//--------------global variable--------------------
+var balance = 0;
+
 document.getElementById('cal').addEventListener('click', function(){
     let number = document.getElementById('income');
     let floatNumber = number.value;
@@ -41,19 +44,22 @@ document.getElementById('cal').addEventListener('click', function(){
 
     //  ------------Total eaxpence-----------------
     const totalExpence = foodBalance + rentBalance + clothBalance;
+    let dis = document.getElementById('hide');
+    dis.style.display = 'none';
 
 
     if(incomeBalance >= totalExpence){
         number = document.getElementById('totalEx');
-    number.innerText= totalExpence;
+        number.innerText= totalExpence;
 
-    const balance = incomeBalance - totalExpence;
-    number = document.getElementById('bal');
-    number.innerText= balance;
+        // its varible globally use-------------------
+        balance = incomeBalance - totalExpence;
+        number = document.getElementById('bal');
+        number.innerText= balance;
     
     }
     else{
-        let= dis = document.getElementById('hide');
+    
         dis.style.display = 'block';
     }
 
@@ -70,7 +76,33 @@ document.getElementById('cal').addEventListener('click', function(){
 
 
 // save balanceee------------------
-number = document.getElementById('save');
-    number = number.value;
-    const saveBalance = giveDigit(number);
+ 
 
+document.getElementById('save').addEventListener('click', function(){
+    let saving = document.getElementById('saveinput');
+    saving = saving.value;
+    const savePercent = giveDigit(saving);
+    console.log(savePercent);
+
+    // saving balance------------------------------
+    const savingBalance = (savePercent/100) * balance;
+    console.log(savingBalance);
+
+
+    // -----after save account have this balance---------
+    const finalBalance = balance - savingBalance;
+    console.log(finalBalance);
+
+
+
+    //------displaypart-----------------------
+    let  number = document.getElementById("savingper");
+    number.innerText= savingBalance;
+
+
+
+    // -----finalBalance---------------------------
+     number = document.getElementById("finalBal");
+     number.innerText= finalBalance;
+
+ })
